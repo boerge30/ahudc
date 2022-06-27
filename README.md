@@ -1,4 +1,4 @@
 # AdGuard Home with Unbound
-Adguard Unbound docker-compose.yml
+AdGuard Home: [Github](https://github.com/AdguardTeam/AdGuardHome) [DockerHub](https://hub.docker.com/r/adguard/adguardhome)
 
-AdGuard Home: [Github https://github.com/AdguardTeam/AdGuardHome] (https://github.com/AdguardTeam/AdGuardHome)
+klutchell/unbound: [Github](https://github.com/klutchell/unbound-docker) [DockerHub](https://hub.docker.com/r/klutchell/unbound)
