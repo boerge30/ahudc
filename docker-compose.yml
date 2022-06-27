@@ -11,13 +11,13 @@ services:
     image: adguard/adguardhome
     container_name: adguardhome
     ports:
-      - 53:53/tcp
+      - 53:53/tcp # DNS
       - 53:53/udp
-      - 784:784/udp
-      - 853:853/tcp
-      - 3000:3000/tcp
-      - 8080:80/tcp
-      - 4443:443/tcp
+      - 784:784/udp # DNS over QUIC
+      - 853:853/tcp # DNS over TLS
+      - 3000:3000/tcp # initial installation
+      - 8080:80/tcp # Dashboard
+      - 4443:443/tcp # DNS over HTTPs
     volumes:
       - work:/opt/adguardhome/work
       - conf:/opt/adguardhome/conf
@@ -29,7 +29,7 @@ services:
     image: klutchell/unbound
     networks:
       default:
-        ipv4_address: 172.20.0.53
+        ipv4_address: 172.20.0.53 # fixed IP address
 
 networks:
   default:
